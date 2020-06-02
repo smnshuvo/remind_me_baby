@@ -13,6 +13,26 @@ class _HomeState extends State<Home> {
         title: Text(
           "Remind me baby",
         ),
+        actions: <Widget>[
+          // leads to the setter page
+          IconButton(
+            icon: Icon(
+              Icons.update
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, "/scheduler");
+            },
+          ),
+          // leads to the group page
+          IconButton(
+            icon: Icon(
+                Icons.notifications_active
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, "/group");
+            },
+          ),
+        ],
       ) ,
       body: SafeArea(
         child: Column(
